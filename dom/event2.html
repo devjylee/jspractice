@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome</title>
+  </head>
+  <body>
+    <button id="btn">클릭</button>
+    <input id="txt" type="text" />
+    <script>
+      function sayHello() {
+        alert("hello");
+      }
+
+      const el = document.getElementById("btn");
+      el.addEventListener("dblclick", sayHello);
+
+      const input = document.getElementById("txt");
+      input.addEventListener("keyup", (event) => {
+        console.log(event.key);
+      });
+      input.addEventListener("focus", () => {
+        input.style.backgroundColor = "rgba(255,0,0,0.2)";
+      });
+      input.addEventListener("blur", () => {
+        input.style.backgroundColor = null;
+      });
+    </script>
+  </body>
+</html>
